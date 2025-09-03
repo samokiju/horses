@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Poiret One", sans-serif;
+            margin: 0;
+        }
+        /** navbar **/
+        
+        #mainheader {
+            top: 0;
+            z-index: 1;
+            position: fixed;
+            border: 1px solid white;
+            width: 100%;
+            height: 5vh;
+            display: flex;
+            text-align: right;
+            background-image: url(backgroundimage2.jpg);
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header {
+            text-align: right;
+            backdrop-filter: blur(10px);
+        }
+        
+        .header a {
+            margin-right: 10px;
+            padding: 5px;
+            font-size: 30px;
+            color: white;
+            text-decoration: none;
+            backdrop-filter: blur(10px);
+        }
+        
+        .header a:hover {
+            color: rgb(209, 88, 88);
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+            transition-duration: 2s;
+            font-size: 40px
+        }
+        
+        .mainheaderlogo {
+            margin-left: 10px;
+            color: white;
+            font-weight: 900;
+            font-size: 30px;
+            text-decoration: none;
+            letter-spacing: 10px;
+        }
+        /**section**/
+        
+        .bg {
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
+        .backgroundimage1 {
+            height: 80vh;
+            background-image: url(backgroundimage1.jpg);
+        }
+        
+        .backgroundimage2 {
+            background-image: url(backgroundimage2.jpg);
+            height: 50vh;
+        }
+        
+        .caption {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+        }
+        
+        .caption .border {
+            background-color: black;
+            color: white;
+            font-size: 60px;
+        }
+        
+        .textsbackgorunds {
+            background-image: url(backgroundimage1.jpg);
+        }
+        
+        .texts {
+            text-align: center;
+            padding: 50px 80px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+            font-size: 20px;
+            backdrop-filter: blur(10px);
+            padding: 90px;
+        }
+        
+        .texts p {
+            margin-top: 30px;
+            background-color: rgb(0, 0, 0);
+            padding: 20px;
+        }
+        /**wrapper**/
+        
+        @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        *:focus,
+        *:active {
+            outline: none !important;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        #footericons a {
+            display: inline-block;
+            color: inherit;
+            text-decoration: none;
+        }
+        
+        #footericons {
+            border: 1px solid white;
+            background-image: url(backgroundimage2.jpg);
+            display: grid;
+            height: 110px;
+            width: 100%;
+            font-family: "Poppins", sans-serif;
+            place-items: center;
+        }
+        
+        .wrapper {
+            display: inline-flex;
+            list-style: none;
+            position: relative;
+            top: 20px;
+        }
+        
+        .wrapper .icon {
+            position: relative;
+            background: #ffffff;
+            border-radius: 50%;
+            padding: 15px;
+            margin: 5px;
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        .wrapper .name {
+            position: absolute;
+            top: 0;
+            font-size: 14px;
+            background: #ffffff;
+            color: #ffffff;
+            padding: 5px 8px;
+            border-radius: 5px;
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        .wrapper .name::before {
+            position: absolute;
+            content: "";
+            height: 8px;
+            width: 8px;
+            background: #ffffff;
+            bottom: -3px;
+            left: 50%;
+            transform: translate(-50%) rotate(45deg);
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        .wrapper .icon:hover .name {
+            top: -45px;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+        
+        .wrapper .icon:hover span,
+        .wrapper .icon:hover .name {
+            text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+        }
+        
+        .wrapper .facebook:hover,
+        .wrapper .facebook:hover .name,
+        .wrapper .facebook:hover .name::before {
+            background: #1877f2;
+            color: #ffffff;
+        }
+        
+        .wrapper .twitter:hover,
+        .wrapper .twitter:hover .name,
+        .wrapper .twitter:hover .name::before {
+            background: #1da1f2;
+            color: #ffffff;
+        }
+        
+        .wrapper .instagram:hover .name::before {
+            background: #ffa724;
+            color: #ffffff;
+        }
+        
+        .wrapper .instagram:hover,
+        .wrapper .instagram:hover .name {
+            background: #d6249f;
+            background: radial-gradient( circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+        }
+        
+        .wrapper .github:hover,
+        .wrapper .github:hover .name,
+        .wrapper .github:hover .name::before {
+            background: #333333;
+            color: #ffffff;
+        }
+        
+        .wrapper .youtube:hover,
+        .wrapper .youtube:hover .name,
+        .wrapper .youtube:hover .name::before {
+            background: #cd201f;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+
+<body>
+    <header id="mainheader">
+        <nav class="mainheaderlogo">
+            <a href="" class="mainheaderlogo">HORSES</a>
+        </nav>
+        <nav class="header">
+            <a href="">Contact</a>
+            <a href="">About Us</a>
+        </nav>
+    </header>
+
+    <div class="mainbackground"></div>
+
+    <div class="bg backgroundimage1">
+        <div class="caption"> <span class="border">Horses.</span>
+        </div>
+    </div>
+    <div class="textsbackgorunds">
+        <div class="texts">
+            <h3>Lorem, ipsum.</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse tempore natus necessitatibus placeat enim repudiandae doloremque a impedit ipsum dolorum ratione eum eos quis, maxime est minus cumque! Adipisci, hic. Sequi doloremque voluptates
+                a non provident eveniet atque ea esse illo qui voluptatibus libero ut ratione repudiandae tempora perferendis autem sint, eum earum voluptas? Quisquam illo soluta animi aliquam omnis! Voluptate repellendus mollitia soluta id voluptatem.
+                Tempore veritatis quos vel iusto. Molestias modi, ipsa neque ratione, temporibus alias architecto illo eos impedit dolores esse suscipit sequi voluptatem aliquid itaque. Iste?</p>
+        </div>
+    </div>
+
+    <div class="bg backgroundimage2">
+        <div class="caption"> <span class="border">Beautiful Animals.</span>
+        </div>
+    </div>
+
+    <div class="textsbackgorunds">
+        <div class="texts">
+            <h3>Lorem, ipsum.</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse tempore natus necessitatibus placeat enim repudiandae doloremque a impedit ipsum dolorum ratione eum eos quis, maxime est minus cumque! Adipisci, hic. Sequi doloremque voluptates
+                a non provident eveniet atque ea esse illo qui voluptatibus libero ut ratione repudiandae tempora perferendis autem sint, eum earum voluptas? Quisquam illo soluta animi aliquam omnis! Voluptate repellendus mollitia soluta id voluptatem.
+                Tempore veritatis quos vel iusto. Molestias modi, ipsa neque ratione, temporibus alias architecto illo eos impedit dolores esse suscipit sequi voluptatem aliquid itaque. Iste?</p>
+        </div>
+    </div>
+    <footer id="footer">
+        <section id="footericons">
+            <ul class="wrapper">
+                <li class="icon facebook">
+                    <span class="name">Facebook</span>
+                    <span><i class="fab fa-facebook-f"></i></span>
+                </li>
+                <li class="icon twitter">
+                    <span class="name">Twitter</span>
+                    <span><i class="fab fa-twitter"></i></span>
+                </li>
+                <li class="icon instagram">
+                    <span class="name">Instagram</span>
+                    <span><i class="fab fa-instagram"></i></span>
+                </li>
+                <li class="icon github">
+                    <span class="name">Github</span>
+                    <a href="https://github.com/samokiju">
+                        <span><i class="fab fa-github"></i></span>
+                    </a>
+
+                </li>
+                <li class="icon youtube">
+                    <span class="name">Youtube</span>
+                    <span><i class="fab fa-youtube"></i></span>
+                </li>
+            </ul>
+        </section>
+    </footer>
+
+
+
+
+</body>
+
+</html>
